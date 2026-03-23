@@ -508,7 +508,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 0ba477ba9e225044ab6bbc25b255afba, type: 3}
       propertyPath: m_LocalScale.x
-      value: 30
+      value: 35.829002
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ba477ba9e225044ab6bbc25b255afba, type: 3}
       propertyPath: m_LocalScale.y
@@ -520,7 +520,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ba477ba9e225044ab6bbc25b255afba, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.00087095
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 0ba477ba9e225044ab6bbc25b255afba, type: 3}
       propertyPath: m_LocalPosition.y
@@ -563,7 +563,9 @@ PrefabInstance:
       value: Rock
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: -1018664272722485354, guid: 0ba477ba9e225044ab6bbc25b255afba, type: 3}
+    - {fileID: -7029948723529949830, guid: 0ba477ba9e225044ab6bbc25b255afba, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ba477ba9e225044ab6bbc25b255afba, type: 3}
