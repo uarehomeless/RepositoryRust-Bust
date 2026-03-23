@@ -132,6 +132,7 @@ GameObject:
   - component: {fileID: 286719330}
   - component: {fileID: 286719329}
   - component: {fileID: 286719334}
+  - component: {fileID: 286719336}
   - component: {fileID: 286719335}
   m_Layer: 0
   m_Name: Player
@@ -232,8 +233,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 346124300}
   - {fileID: 330585546}
+  - {fileID: 346124300}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!54 &286719334
@@ -272,21 +273,42 @@ MonoBehaviour:
   m_GameObject: {fileID: 286719328}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 580250769a266494e8f910dab49b7a81, type: 3}
+  m_Script: {fileID: 11500000, guid: ed070be542ec9e54bbb28d2268257678, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FPSController
-  walkSpeed: 5
-  sprintSpeed: 9
-  dashForce: 15
-  jumpForce: 5
-  cameraTransform: {fileID: 330585546}
-  mouseSensitivity: 100
-  groundMask:
-    m_Bits: 0
-  groundCheckDistance: 1.1
-  rb: {fileID: 0}
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerController
+  moveSpeed: 5
+  jumpHeight: 2
+  gravity: -10
+  mouseSensitivity: 1000
+  playerCamera: {fileID: 330585546}
+  controller: {fileID: 0}
+  velocity: {x: 0, y: 0, z: 0}
   xRotation: 0
-  isGrounded: 0
+--- !u!143 &286719336
+CharacterController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 286719328}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Height: 2
+  m_Radius: 0.5
+  m_SlopeLimit: 45
+  m_StepOffset: 0.3
+  m_SkinWidth: 0.08
+  m_MinMoveDistance: 0.001
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
