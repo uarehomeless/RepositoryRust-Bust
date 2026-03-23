@@ -4,11 +4,12 @@ public class PlayerHit : MonoBehaviour
 {
     public float hitRange = 2f; // How close player must be
     public Camera playerCamera;
-
+    public Animator weaponAnimator;
     void Update()
     {
         if (Input.GetMouseButtonDown(0)) // Left click
         {
+            weaponAnimator.SetTrigger("Hit");
             TryHit();
         }
     }
