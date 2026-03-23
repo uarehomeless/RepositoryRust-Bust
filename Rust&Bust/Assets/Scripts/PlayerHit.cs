@@ -19,9 +19,11 @@ public class PlayerHit : MonoBehaviour
 
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, hitRange))
         {
-            if (hit.collider.CompareTag("Hittable"))
+            HittableObject hittable = hit.collider.GetComponent<HittableObject>();
+
+            if (hittable != null)
             {
-                Debug.Log("You hit a hittable object: " + hit.collider.name);
+                hittable.OnHit();
             }
         }
         else
