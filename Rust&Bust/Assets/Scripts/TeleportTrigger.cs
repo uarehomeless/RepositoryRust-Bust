@@ -2,14 +2,20 @@ using UnityEngine;
 
 public class TeleportTrigger : MonoBehaviour
 {
-    public Transform teleportTarget; // Where player will be teleported
+    public Transform teleportTarget;
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.CompareTag("Player"))
         {
             other.transform.position = teleportTarget.position;
-            Debug.Log("Player teleported!");
+        }
+
+        SimpleBot bot = other.GetComponent<SimpleBot>();
+
+        if (bot != null)
+        {
+            bot.TeleportToSpawn();
         }
     }
 }

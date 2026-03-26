@@ -8,10 +8,13 @@ public class SimpleBot : MonoBehaviour
     private Vector3 moveDirection;
     private float timer;
     private BotSpawner spawner;
+    private Vector3 spawnPosition;
+    public GameObject hitEffect;
 
     void Start()
     {
         spawner = FindObjectOfType<BotSpawner>();
+        spawnPosition = transform.position;
     }
 
     void Update()
@@ -36,9 +39,15 @@ public class SimpleBot : MonoBehaviour
     }
     public void OnHit()
     {
-        Debug.Log("Bot destroyed!");
-
+        if (hitEffect != null)
+        {
+            Instantiate(hitEffect, transform.position, Quaternion.identity);
+        }
         spawner.RespawnBot();
         Destroy(gameObject);
+    }
+    public void TeleportToSpawn()
+    {
+        transform.position = spawnPosition;
     }
 }
