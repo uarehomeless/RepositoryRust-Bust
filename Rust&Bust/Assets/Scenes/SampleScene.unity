@@ -288,6 +288,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: RustMap
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: c2c793c5033ee6b4bb8e2f20593b1f38, type: 3}
+      propertyPath: m_TagString
+      value: Ground
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -528,6 +532,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 529321618}
+  - {fileID: 1575974466}
   - {fileID: 346124300}
   m_Father: {fileID: 2140292494}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1048,7 +1054,7 @@ Transform:
   m_GameObject: {fileID: 529321617}
   serializedVersion: 2
   m_LocalRotation: {x: -0.70667607, y: 0.02467767, z: 0.02467767, w: 0.70667607}
-  m_LocalPosition: {x: -0.5, y: 0, z: 0.4}
+  m_LocalPosition: {x: -0.5, y: -0.5, z: 0.4}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -1057,7 +1063,7 @@ Transform:
   - {fileID: 811101014}
   - {fileID: 282788918}
   - {fileID: 1421568268}
-  m_Father: {fileID: 2140292494}
+  m_Father: {fileID: 330585546}
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 4}
 --- !u!136 &529321619
 CapsuleCollider:
@@ -2049,7 +2055,7 @@ Transform:
   m_GameObject: {fileID: 1575974465}
   serializedVersion: 2
   m_LocalRotation: {x: 0.09946127, y: -0.70007694, z: 0.69143325, w: -0.14805382}
-  m_LocalPosition: {x: 0.5, y: 0, z: 0.4}
+  m_LocalPosition: {x: 0.5, y: -0.5, z: 0.4}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -2058,7 +2064,7 @@ Transform:
   - {fileID: 210811327}
   - {fileID: 914033924}
   - {fileID: 981869581}
-  m_Father: {fileID: 2140292494}
+  m_Father: {fileID: 330585546}
   m_LocalEulerAnglesHint: {x: 110.172, y: -90, z: 94}
 --- !u!136 &1575974467
 CapsuleCollider:
@@ -2157,7 +2163,7 @@ GameObject:
   - component: {fileID: 2140292496}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2300,8 +2306,6 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 330585546}
-  - {fileID: 529321618}
-  - {fileID: 1575974466}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2140292495
