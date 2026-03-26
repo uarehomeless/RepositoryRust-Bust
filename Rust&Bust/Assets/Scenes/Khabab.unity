@@ -612,11 +612,14 @@ MonoBehaviour:
   slotImages:
   - {fileID: 1080009886}
   - {fileID: 1195052014}
+  - {fileID: 1351387391}
+  - {fileID: 1580639532}
+  - {fileID: 688250069}
   items:
   - itemName: rock
     icon: {fileID: 0}
     prefab: {fileID: 652307841}
-  - itemName: Torch
+  - itemName: torch
     icon: {fileID: 0}
     prefab: {fileID: 2101195171}
   handTransform: {fileID: 1313845177}
@@ -777,7 +780,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 652307842}
   - {fileID: 1313845177}
   m_Father: {fileID: 1607220125}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1109,7 +1111,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1313845177}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 9c0e1b77a20c345468a175dcf269408f, type: 3}
       propertyPath: m_LocalScale.x
@@ -1117,23 +1119,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c0e1b77a20c345468a175dcf269408f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 5.7174325
+      value: 5.717432
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c0e1b77a20c345468a175dcf269408f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 35.373325
+      value: 35.37332
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c0e1b77a20c345468a175dcf269408f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.6904
+      value: 0.52
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c0e1b77a20c345468a175dcf269408f, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.89294
+      value: 0.07
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c0e1b77a20c345468a175dcf269408f, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.87616
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c0e1b77a20c345468a175dcf269408f, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1145,7 +1147,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c0e1b77a20c345468a175dcf269408f, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 9c0e1b77a20c345468a175dcf269408f, type: 3}
       propertyPath: m_LocalRotation.z
@@ -1167,6 +1169,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Torch
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9c0e1b77a20c345468a175dcf269408f, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1178,15 +1184,15 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 744160126}
+    m_TransformParent: {fileID: 1313845177}
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 048c91da6448de34da810b87f3890117, type: 3}
       propertyPath: m_LocalScale.x
-      value: 20.097002
+      value: 20.097004
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 048c91da6448de34da810b87f3890117, type: 3}
       propertyPath: m_LocalScale.y
-      value: 24.1164
+      value: 24.116398
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 048c91da6448de34da810b87f3890117, type: 3}
       propertyPath: m_LocalScale.z
@@ -1194,15 +1200,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 048c91da6448de34da810b87f3890117, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.03
+      value: 0.029999971
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 048c91da6448de34da810b87f3890117, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.37300003
+      value: 0.08699998
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 048c91da6448de34da810b87f3890117, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.9
+      value: -0.030000031
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 048c91da6448de34da810b87f3890117, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1235,6 +1241,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 048c91da6448de34da810b87f3890117, type: 3}
       propertyPath: m_Name
       value: Rock
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 048c91da6448de34da810b87f3890117, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1583,7 +1593,9 @@ Transform:
   m_LocalPosition: {x: 0, y: -0.46, z: 0.93}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 652307842}
+  - {fileID: 2101195174}
   m_Father: {fileID: 744160126}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1351387389
@@ -1752,6 +1764,7 @@ GameObject:
   - component: {fileID: 1607220126}
   - component: {fileID: 1607220127}
   - component: {fileID: 1607220128}
+  - component: {fileID: 1607220129}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Player
@@ -1923,15 +1936,35 @@ MonoBehaviour:
   m_GameObject: {fileID: 1607220120}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ede44b708485288428b45f59fd3f9e6f, type: 3}
+  m_Script: {fileID: 11500000, guid: 7f7ec5663f94c60498ad87e5176babb6, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FPSController
-  cameraTransform: {fileID: 744160126}
-  moveSpeed: 6
-  jumpForce: 5
-  sprintSpeed: 10
-  mouseSensitivity: 100
-  JumpForce: 5
+  m_EditorClassIdentifier: Assembly-CSharp::SimpleHotbar
+  slotImages:
+  - {fileID: 1080009886}
+  - {fileID: 1195052014}
+  items:
+  - itemName: rock
+    icon: {fileID: 0}
+    prefab: {fileID: 652307841}
+  - itemName: torch
+    icon: {fileID: 0}
+    prefab: {fileID: 2101195171}
+  handTransform: {fileID: 1313845177}
+  selectedColor: {r: 1, g: 1, b: 1, a: 1}
+  normalColor: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+--- !u!114 &1607220129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607220120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 284d6876e69e15a4fa8e850e5bd38fa2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::SimpleHotbar
+  items: []
 --- !u!1 &1788079860
 GameObject:
   m_ObjectHideFlags: 0
@@ -2195,6 +2228,11 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9c0e1b77a20c345468a175dcf269408f, type: 3}
   m_PrefabInstance: {fileID: 1104690456}
   m_PrefabAsset: {fileID: 0}
+--- !u!4 &2101195174 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 9c0e1b77a20c345468a175dcf269408f, type: 3}
+  m_PrefabInstance: {fileID: 1104690456}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
@@ -2207,6 +2245,5 @@ SceneRoots:
   - {fileID: 1213376698}
   - {fileID: 499914846}
   - {fileID: 2067441401}
-  - {fileID: 1104690456}
   - {fileID: 2091741629}
   - {fileID: 778308102}
