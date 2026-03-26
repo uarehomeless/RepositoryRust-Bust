@@ -20,16 +20,14 @@ public class PlayerHit : MonoBehaviour
 
         if (Physics.Raycast(playerCamera.transform.position, playerCamera.transform.forward, out hit, hitRange))
         {
-            HittableObject hittable = hit.collider.GetComponent<HittableObject>();
+            Debug.Log("Hit: " + hit.collider.name);
 
-            if (hittable != null)
+            SimpleBot bot = hit.collider.GetComponent<SimpleBot>();
+
+            if (bot != null)
             {
-                hittable.OnHit();
+                bot.OnHit();
             }
-        }
-        else
-        {
-            Debug.Log("Missed");
         }
     }
 }
