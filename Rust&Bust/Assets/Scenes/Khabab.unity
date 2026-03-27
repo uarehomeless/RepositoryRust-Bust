@@ -1198,7 +1198,7 @@ MonoBehaviour:
   moveSpeed: 6
   jumpForce: 5
   sprintSpeed: 10
-  mouseSensitivity: 100
+  mouseSensitivity: 200
   JumpForce: 5
 --- !u!136 &1607220122
 CapsuleCollider:
