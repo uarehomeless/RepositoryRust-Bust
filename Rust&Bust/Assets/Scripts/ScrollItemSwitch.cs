@@ -6,6 +6,9 @@ public class ScrollItemSwitch : MonoBehaviour
 
     private int currentIndex = 0;
 
+    public float scrollCooldown = 1f; // time between scrolls
+    private float nextScrollTime = 0f;
+
     void Start()
     {
         UpdateItems();
@@ -15,10 +18,14 @@ public class ScrollItemSwitch : MonoBehaviour
     {
         float scroll = Input.GetAxis("Mouse ScrollWheel");
 
+        // check cooldown
+        if (Time.time < nextScrollTime) return;
+
         if (scroll > 0f)
         {
             currentIndex = (currentIndex + 1) % items.Length;
             UpdateItems();
+            nextScrollTime = Time.time + scrollCooldown;
         }
         else if (scroll < 0f)
         {
@@ -27,6 +34,7 @@ public class ScrollItemSwitch : MonoBehaviour
                 currentIndex = items.Length - 1;
 
             UpdateItems();
+            nextScrollTime = Time.time + scrollCooldown;
         }
     }
 
