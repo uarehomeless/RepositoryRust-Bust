@@ -9,7 +9,11 @@ public class PlayerHit : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0)) // Left click
         {
-            weaponAnimator.SetTrigger("Hit");
+            if (weaponAnimator != null)
+            {
+                weaponAnimator.SetTrigger("Hit");
+            }
+
             TryHit();
         }
     }

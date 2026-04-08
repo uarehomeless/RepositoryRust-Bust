@@ -3,7 +3,7 @@ using UnityEngine;
 public class HitCounter : MonoBehaviour
 {
     private int hits = 0;
-    public float maxDistance = 2f; // adjust this in Inspector
+    public float maxDistance = 2f;
 
     void OnMouseDown()
     {
@@ -15,8 +15,15 @@ public class HitCounter : MonoBehaviour
 
             if (hits >= 4)
             {
-                Destroy(gameObject);
+                gameObject.SetActive(false);
+                Invoke(nameof(Respawn), 80f);
             }
         }
+    }
+
+    void Respawn()
+    {
+        hits = 0;
+        gameObject.SetActive(true);
     }
 }
