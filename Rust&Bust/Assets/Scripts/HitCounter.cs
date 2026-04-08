@@ -15,8 +15,12 @@ public class HitCounter : MonoBehaviour
 
             if (hits >= 4)
             {
+                // Give random scrap (1–5)
+                int scrapAmount = Random.Range(1, 6);
+                ScrapManager.Instance.AddScrap(scrapAmount);
+
                 gameObject.SetActive(false);
-                Invoke(nameof(Respawn), 80f);
+                Invoke(nameof(Respawn), 20f);
             }
         }
     }
