@@ -497,6 +497,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleBot
   moveSpeed: 2
+  chaseSpeed: 4
+  detectionRange: 15
   changeDirectionTime: 3
   hitEffect: {fileID: 2579285815747489905, guid: a8bc261a6e8c13b4bb82e8abba1cbd58, type: 3}
 --- !u!82 &-8027417942262288610
@@ -521,7 +523,7 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 2
-  MaxDistance: 20
+  MaxDistance: 15
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0

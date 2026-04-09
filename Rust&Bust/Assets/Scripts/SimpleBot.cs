@@ -75,6 +75,6 @@ public class SimpleBot : MonoBehaviour
 
         direction.y = 0;
 
-        transform.position += direction * chaseSpeed * Time.deltaTime;
+        transform.position += direction * 5 * Time.deltaTime;
     }
 }
