@@ -21,6 +21,10 @@ public class ScrapManager : MonoBehaviour
     public void AddScrap(int amount)
     {
         scrap += amount;
+
+        if (scrap < 0)
+            scrap = 0;
+
         scrapText.text = "Scrap: " + scrap;
     }
 }
