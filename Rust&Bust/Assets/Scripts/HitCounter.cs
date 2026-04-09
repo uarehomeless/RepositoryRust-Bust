@@ -15,13 +15,34 @@ public class HitCounter : MonoBehaviour
 
             if (hits >= 4)
             {
-                // Give random scrap (1–5)
-                int scrapAmount = Random.Range(1, 6);
+                int scrapAmount = GetRandomScrap();
                 ScrapManager.Instance.AddScrap(scrapAmount);
 
                 gameObject.SetActive(false);
                 Invoke(nameof(Respawn), 20f);
             }
+        }
+    }
+
+    int GetRandomScrap()
+    {
+        float rand = Random.Range(0f, 100f);
+
+        if (rand <= 60f) // 60% chance
+        {
+            return Random.Range(1, 26); // 1–25
+        }
+        else if (rand <= 95f) // 35% chance (60 + 35)
+        {
+            return Random.Range(50, 151); // 50–150
+        }
+        else if (rand <= 99f) // 4% chance (95 + 4)
+        {
+            return Random.Range(250, 1001); // 250–1000
+        }
+        else // 1% chance (100 - 99)
+        {
+            return Random.Range(2500, 10001); // 2500–10000
         }
     }
 
