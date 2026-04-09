@@ -3,7 +3,7 @@
 public class SimpleBot : MonoBehaviour
 {
     public float moveSpeed = 2f;
-    public float chaseSpeed = 4f;
+    public float chaseSpeed = 2f;
     public float detectionRange = 15f;
 
     private Transform player;
@@ -68,5 +68,13 @@ public class SimpleBot : MonoBehaviour
     public void TeleportToSpawn()
     {
         transform.position = spawnPosition;
+    }
+    public void ForceRunAway(Vector3 safeZoneCenter)
+    {
+        Vector3 direction = (transform.position - safeZoneCenter).normalized;
+
+        direction.y = 0;
+
+        transform.position += direction * chaseSpeed * Time.deltaTime;
     }
 }
