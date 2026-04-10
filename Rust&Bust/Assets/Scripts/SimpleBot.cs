@@ -77,4 +77,16 @@ public class SimpleBot : MonoBehaviour
 
         transform.position += direction * 5 * Time.deltaTime;
     }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
+
+            if (playerHealth != null)
+            {
+                playerHealth.TakeDamage(25);
+            }
+        }
+    }
 }
