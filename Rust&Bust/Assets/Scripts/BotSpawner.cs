@@ -14,6 +14,7 @@ public class BotSpawner : MonoBehaviour
 
     public void RespawnBot()
     {
+        Debug.Log("Spawner position: " + transform.position);
         Invoke(nameof(SpawnBot), respawnTime);
     }
 }

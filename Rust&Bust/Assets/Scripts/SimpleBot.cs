@@ -58,9 +58,9 @@ public class SimpleBot : MonoBehaviour
     }
     public void OnHit()
     {
-        if (spawner != null)
+        if (hitEffect != null)
         {
-            spawner.RespawnBot();
+            Instantiate(hitEffect, transform.position, Quaternion.identity);
         }
         spawner.RespawnBot();
         Destroy(gameObject);
