@@ -30,7 +30,7 @@ public class PlayerHit : MonoBehaviour
 
             if (bot != null)
             {
-                bot.OnHit();
+                bot.TeleportToSpawn();
             }
         }
     }

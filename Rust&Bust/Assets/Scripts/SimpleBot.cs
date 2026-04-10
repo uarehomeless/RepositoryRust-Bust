@@ -1,8 +1,12 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class SimpleBot : MonoBehaviour
 {
     public float moveSpeed = 2f;
+    public float chaseSpeed = 2f;
+    public float detectionRange = 15f;
+
+    private Transform player;
     public float changeDirectionTime = 3f;
 
     private Vector3 moveDirection;
@@ -13,19 +17,34 @@ public class SimpleBot : MonoBehaviour
 
     void Start()
     {
-        spawner = FindObjectOfType<BotSpawner>();
-        spawnPosition = transform.position;
+        player = GameObject.FindGameObjectWithTag("Player").transform;
+        PickNewDirection();
     }
 
     void Update()
     {
-        transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+        float distanceToPlayer = Vector3.Distance(transform.position, player.position);
 
-        timer += Time.deltaTime;
-
-        if (timer >= changeDirectionTime)
+        // If player has scrap and is close → chase
+        if (ScrapManager.Instance.scrap > 0 && distanceToPlayer < detectionRange)
         {
-            PickNewDirection();
+            Vector3 direction = (player.position - transform.position).normalized;
+
+            transform.position += direction * chaseSpeed * Time.deltaTime;
+
+            transform.forward = direction;
+        }
+        else
+        {
+            // Wander (your old logic)
+            transform.Translate(moveDirection * moveSpeed * Time.deltaTime);
+
+            timer += Time.deltaTime;
+
+            if (timer >= changeDirectionTime)
+            {
+                PickNewDirection();
+            }
         }
     }
 
@@ -49,5 +68,13 @@ public class SimpleBot : MonoBehaviour
     public void TeleportToSpawn()
     {
         transform.position = spawnPosition;
+    }
+    public void ForceRunAway(Vector3 safeZoneCenter)
+    {
+        Vector3 direction = (transform.position - safeZoneCenter).normalized;
+
+        direction.y = 0;
+
+        transform.position += direction * 5 * Time.deltaTime;
     }
 }
