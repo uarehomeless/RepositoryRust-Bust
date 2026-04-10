@@ -6,6 +6,9 @@ public class SimpleBot : MonoBehaviour
     public float chaseSpeed = 2f;
     public float detectionRange = 15f;
 
+    private float damageCooldown = 1f;
+    private float lastDamageTime;
+
     private Transform player;
     public float changeDirectionTime = 3f;
 
@@ -75,17 +78,21 @@ public class SimpleBot : MonoBehaviour
 
         direction.y = 0;
 
-        transform.position += direction * 5 * Time.deltaTime;
+        transform.position += direction * 20 * Time.deltaTime;
     }
-    private void OnCollisionEnter(Collision collision)
+    private void OnTriggerStay(Collider other)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (other.CompareTag("Player"))
         {
-            PlayerHealth playerHealth = collision.gameObject.GetComponent<PlayerHealth>();
-
-            if (playerHealth != null)
+            if (Time.time >= lastDamageTime + damageCooldown)
             {
-                playerHealth.TakeDamage(25);
+                PlayerHealth playerHealth = other.GetComponent<PlayerHealth>();
+
+                if (playerHealth != null)
+                {
+                    playerHealth.TakeDamage(10);
+                    lastDamageTime = Time.time;
+                }
             }
         }
     }

@@ -7,6 +7,11 @@ public class MainMenu : MonoBehaviour
     {
         SceneManager.LoadScene(1); // change to your game scene name
     }
+    private void Update()
+    {
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
+    }
 
     public void ExitGame()
     {

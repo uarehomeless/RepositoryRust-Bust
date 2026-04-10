@@ -352,6 +352,7 @@ GameObject:
   - component: {fileID: 7538156379388250650}
   - component: {fileID: 4984271670203551109}
   - component: {fileID: -8027417942262288610}
+  - component: {fileID: -8047402819420253326}
   m_Layer: 0
   m_Name: bot
   m_TagString: Untagged
@@ -598,6 +599,29 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!136 &-8047402819420253326
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6342193958585780855}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &7301598780781413132
 GameObject:
   m_ObjectHideFlags: 0
