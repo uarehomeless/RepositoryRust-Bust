@@ -496,8 +496,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6161da5da1d1bdb4eb76ae3bab3c6217, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SimpleBot
-  moveSpeed: 2
-  chaseSpeed: 6
+  moveSpeed: 4
+  chaseSpeed: 8
   detectionRange: 200000000
   changeDirectionTime: 3
   hitEffect: {fileID: 2579285815747489905, guid: a8bc261a6e8c13b4bb82e8abba1cbd58, type: 3}
