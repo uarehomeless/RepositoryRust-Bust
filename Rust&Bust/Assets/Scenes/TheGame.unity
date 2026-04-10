@@ -12828,8 +12828,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FPSController
   cameraTransform: {fileID: 330585546}
-  moveSpeed: 6
-  sprintSpeed: 10
+  moveSpeed: 8
+  sprintSpeed: 16
   crouchSpeed: 3
   jumpForce: 6
   mouseSensitivity: 250
