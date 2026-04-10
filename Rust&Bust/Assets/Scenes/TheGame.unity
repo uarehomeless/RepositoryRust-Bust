@@ -5112,6 +5112,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4984271670203551109, guid: 0b05dcf5cce0f584aa33005d294ad292, type: 3}
+      propertyPath: detectionRange
+      value: 2e+12
+      objectReference: {fileID: 0}
     - target: {fileID: 6342193958585780855, guid: 0b05dcf5cce0f584aa33005d294ad292, type: 3}
       propertyPath: m_Name
       value: bot (3)
@@ -10543,7 +10547,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4984271670203551109, guid: 0b05dcf5cce0f584aa33005d294ad292, type: 3}
       propertyPath: detectionRange
-      value: 100
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6342193958585780855, guid: 0b05dcf5cce0f584aa33005d294ad292, type: 3}
       propertyPath: m_Name
