@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
     {
         Debug.Log("Player died!");
         // Add game over or respawn here
+        SceneManager.LoadScene("MainMenu");
     }
 
     public void Heal(int amount)
