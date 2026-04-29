@@ -18,20 +18,25 @@ public class ScrollItemSwitch : MonoBehaviour
     {
         float scroll = Input.GetAxis("Mouse ScrollWheel");
 
-        // check cooldown
+        // cooldown check
         if (Time.time < nextScrollTime) return;
 
+        // REVERSED SCROLL DIRECTION
         if (scroll > 0f)
         {
-            currentIndex = (currentIndex + 1) % items.Length;
+            // scroll up = previous item
+            currentIndex--;
+
+            if (currentIndex < 0)
+                currentIndex = items.Length - 1;
+
             UpdateItems();
             nextScrollTime = Time.time + scrollCooldown;
         }
         else if (scroll < 0f)
         {
-            currentIndex--;
-            if (currentIndex < 0)
-                currentIndex = items.Length - 1;
+            // scroll down = next item
+            currentIndex = (currentIndex + 1) % items.Length;
 
             UpdateItems();
             nextScrollTime = Time.time + scrollCooldown;
