@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlaySoundOnMouseClick : MonoBehaviour
 {
@@ -12,12 +12,11 @@ public class PlaySoundOnMouseClick : MonoBehaviour
 
     void Update()
     {
-        if (gameObject.activeInHierarchy)
+        if (!gameObject.activeInHierarchy) return;
+
+        if (Input.GetMouseButtonDown(0))
         {
-            if (Input.GetMouseButtonDown(0)) // Left mouse click
-            {
-                audioSource.PlayOneShot(clickSound);
-            }
+            audioSource.PlayOneShot(clickSound);
         }
     }
 }
