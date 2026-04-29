@@ -12,9 +12,12 @@ public class PlaySoundOnMouseClick : MonoBehaviour
 
     void Update()
     {
-        if (Input.GetMouseButtonDown(0)) // Left mouse click
+        if (gameObject.activeInHierarchy)
         {
-            audioSource.PlayOneShot(clickSound);
+            if (Input.GetMouseButtonDown(0)) // Left mouse click
+            {
+                audioSource.PlayOneShot(clickSound);
+            }
         }
     }
 }
